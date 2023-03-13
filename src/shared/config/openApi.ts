@@ -1,5 +1,6 @@
-import { generateFilesApi } from 'shared/lib/gen-api'
 import type { ConfigFile } from '@rtk-query/codegen-openapi'
+
+import { generateFilesApi } from 'shared/lib/gen-api'
 
 const config: ConfigFile = {
 	schemaFile: 'http://linc/swagger-json',

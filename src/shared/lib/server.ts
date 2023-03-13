@@ -1,4 +1,5 @@
 import { AnyAction } from '@reduxjs/toolkit'
+
 import { store } from 'core/store/store'
 import { HeaderProps } from 'shared/constant/HeaderProps'
 
@@ -31,9 +32,12 @@ export const wrapSSPWithRedux = async (arrDispatch: any[]) => {
 	}
 }
 
-export const Test = async (data: ReplaceBoolean<Partial<RootState>>,arr:any[]) => {
+export const Test = async (
+	data: ReplaceBoolean<Partial<RootState>>,
+	arr: any[],
+) => {
 	return {
-		props: { initialState: store.getState() ,data},
+		props: { initialState: store.getState(), data },
 	}
 }
 

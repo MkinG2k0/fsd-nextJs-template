@@ -1,4 +1,5 @@
 import axios from 'axios'
+
 import { AUTH_STATUS } from 'shared/constant/Auth'
 import { setToken } from 'shared/lib/auth'
 

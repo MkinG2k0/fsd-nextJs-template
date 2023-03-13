@@ -1,6 +1,7 @@
+import { persistReducer } from 'redux-persist'
+
 import { rootReducer } from 'core/store/config/rootReducer'
 import { storage } from 'core/store/config/storage'
-import { persistReducer } from 'redux-persist'
 
 export const persistedReducer = persistReducer(
 	{

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+
 import { TOKEN } from 'shared/constant/Auth'
 
 export const getToken = () => {

@@ -1,4 +1,5 @@
 import { Layout as WrapLayout } from 'antd'
+
 import { Footer } from 'entities/layout/ui/footer'
 import { Header } from 'entities/layout/ui/header'
 import { Sider } from 'entities/layout/ui/sider'

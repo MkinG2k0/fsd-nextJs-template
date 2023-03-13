@@ -1,6 +1,7 @@
 import { Skeleton } from 'antd'
-import { persist } from 'core/store/config/persist'
 import { PersistGate } from 'redux-persist/integration/react'
+
+import { persist } from 'core/store/config/persist'
 
 export const WithPersist = (component: FC) => (props) =>
 	(

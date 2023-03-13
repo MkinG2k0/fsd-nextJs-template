@@ -1,5 +1,4 @@
 import { useSession } from 'next-auth/react'
-import style from './authProvider.module.scss'
 
 interface authProviderProps {}
 

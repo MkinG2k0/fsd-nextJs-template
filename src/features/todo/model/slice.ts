@@ -1,8 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { extraReducers } from 'features/todo/model/extraReducers'
 
 import { initialState } from './init'
 import { reducers } from './reducers'
+
+import { extraReducers } from 'features/todo/model/extraReducers'
 
 const Index = createSlice({
 	name: 'Todo',
