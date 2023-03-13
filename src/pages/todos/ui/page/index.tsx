@@ -1,6 +1,7 @@
+import { useEffect } from 'react'
+
 import { GetTodo, TodoList } from 'features/todo'
 import { AddTodo } from 'features/todo/ui/add-todo/add-todo'
-import { useEffect } from 'react'
 
 export const Todos: FC = ({}) => {
 	const { todos } = GetTodo()

@@ -1,6 +1,7 @@
 import { GetServerSideProps } from 'next'
-import { Main } from 'pages/main'
 import { FC } from 'react'
+
+import { Main } from 'pages/main'
 import { WrapSSP } from 'shared/lib/server'
 
 export const getServerSideProps: GetServerSideProps = () => WrapSSP([])

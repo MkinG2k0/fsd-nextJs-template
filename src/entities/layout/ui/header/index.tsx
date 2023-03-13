@@ -1,8 +1,8 @@
 import { Layout, Menu, MenuProps } from 'antd'
+import { useRouter } from 'next/router'
+
 import { MenuItems } from 'entities/layout/config/menu'
 import { SiderBtn } from 'entities/layout/ui/sider-btn'
-import { useRouter } from 'next/router'
-import style from './header.module.scss'
 
 const WrapHeader = Layout.Header
 

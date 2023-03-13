@@ -1,7 +1,8 @@
 import { getServerSession } from 'next-auth/next'
-import { ApiRequest, ApiResponse } from 'shared/Interface/next'
+
 import { authOptions } from './auth/[...nextauth]'
-import type { NextApiRequest, NextApiResponse } from 'next'
+
+import { ApiRequest, ApiResponse } from 'shared/Interface/next'
 
 export default async function handler(
 	req: ApiRequest<any>,

@@ -1,6 +1,6 @@
-import { getStore, store } from 'core/store/store'
-import { useEffect } from 'react'
 import { Provider } from 'react-redux'
+
+import { getStore } from 'core/store/store'
 
 export const WithStore = (component: FC) => (props) => {
 	// if (props.data){

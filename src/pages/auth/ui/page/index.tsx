@@ -1,9 +1,5 @@
-import Link from 'next/link'
-import { useSession, signIn, signOut } from 'next-auth/react'
+import { signIn, signOut, useSession } from 'next-auth/react'
 import { FC } from 'react'
-import { NAV } from 'shared/constant/navigation'
-
-import style from './auth.module.scss'
 
 interface authProps {}
 

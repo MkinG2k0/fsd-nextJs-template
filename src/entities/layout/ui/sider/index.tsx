@@ -1,10 +1,9 @@
 import { Layout, Menu, MenuProps } from 'antd'
-import { GetLayout, setSideCollapsed } from 'entities/layout'
-import { MenuItems } from 'entities/layout/config/menu'
 import { useRouter } from 'next/router'
 import { FC } from 'react'
 
-import style from './sider.module.scss'
+import { GetLayout } from 'entities/layout'
+import { MenuItems } from 'entities/layout/config/menu'
 
 const WrapSider = Layout.Sider
 

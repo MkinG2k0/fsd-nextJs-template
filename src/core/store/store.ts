@@ -1,7 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { setupListeners } from '@reduxjs/toolkit/query'
-import { persistedReducer } from 'core/store/config/persist-reducer'
+
 import middleware from './middleware'
+
+import { persistedReducer } from 'core/store/config/persist-reducer'
 
 const createStore = (preloadedState?: any) =>
 	configureStore({

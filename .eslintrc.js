@@ -3,20 +3,26 @@ module.exports = {
 	parserOptions: {
 		ecmaVersion: 2020,
 		sourceType: 'module',
-		projects: ['./tsconfig.json']
+		projects: ['./tsconfig.json'],
+	},
+	globals: {
+		React: 'readonly',
 	},
 	settings: {
 		react: {
-			version: 'detect'
-		}
+			version: 'detect',
+		},
 	},
 	extends: [
+		'next',
+		// 'next/core-web-vitals',
+		'eslint:recommended',
+		'@feature-sliced',
 		'plugin:react/recommended',
 		'plugin:react-hooks/recommended',
 		'plugin:import/warnings',
 		'plugin:import/typescript',
 		'plugin:eslint-comments/recommended',
-		'@feature-sliced'
 	],
 	plugins: ['import'],
 	rules: {
@@ -24,28 +30,40 @@ module.exports = {
 		indent: ['warn', 'tab'],
 		'comma-dangle': ['warn', 'always-multiline'],
 		'no-unused-vars': 'off',
+		'no-undef': ['off'],
+		'no-empty-pattern': ['off'],
+		'boundaries/element-types': ['off'],
+		'no-mixed-spaces-and-tabs': ['off'],
 
 		'import/order': [
-			'error',
+			'warn',
 			{
+				'newlines-between': 'always',
 				groups: [
-					'builtin',
 					'external',
 					'parent',
 					'sibling',
 					'index',
 					'object',
-					'type'
+					'type',
+					'builtin',
 				],
 				pathGroups: [
 					{
 						pattern: '@/**/**',
 						group: 'parent',
-						position: 'before'
-					}
+						position: 'before',
+					},
+					{
+						pattern: './**',
+						group: 'builtin',
+					},
 				],
-				alphabetize: { order: 'asc' }
-			}
+				// alphabetize: {
+				// 	order: 'asc', /* sort in ascending order. Options: ['ignore', 'asc', 'desc'] */
+				// 	caseInsensitive: true /* ignore case. Options: [true, false] */
+				// }
+			},
 		],
 
 		'react/prop-types': 'off',
@@ -67,6 +85,6 @@ module.exports = {
 
 		'react-hooks/exhaustive-deps': 'off',
 
-		'import/no-internal-modules': 'off'
-	}
+		'import/no-internal-modules': 'off',
+	},
 }

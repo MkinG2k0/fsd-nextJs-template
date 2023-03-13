@@ -9,8 +9,9 @@
     "dev": "next dev ",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "script->": "any =>",
+    "lint": "next lint --fix",
+    "prepare": "husky install",
+    "script->": "script =>",
     "g:swag-api": "npx @rtk-query/codegen-openapi src/shared/config/openApi.ts",
     "g:ui": "npx generate-templates src/shared/config/generate.json ui ",
     "entities->": "entities =>",
@@ -40,13 +41,13 @@
     "axios": "^1.3.4",
     "compose-function": "^3.0.3",
     "next": "13.0.2",
+    "next-auth": "^4.19.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-easy-map": "^1.0.8",
     "react-redux": "^8.0.5",
     "react-use": "^17.4.0",
-    "redux-persist": "^6.0.0",
-    "next-auth": "^4.19.2"
+    "redux-persist": "^6.0.0"
   },
   "devDependencies": {
     "@feature-sliced/eslint-config": "0.1.0-beta.6",
@@ -72,6 +73,7 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-sonarjs": "^0.16.0",
+    "husky": "^8.0.3",
     "postcss": "^8.4.21",
     "prettier": "^2.8.4",
     "prisma": "^4.9.0",
@@ -86,6 +88,6 @@
     "node": ">=14.0.0",
     "yarn": ">=1.22.0",
     "pnpm": ">=7.0.0",
-    "npm": "please-use-pnpm"
+    "npm": "please-use-pnpm or yarn"
   }
 }

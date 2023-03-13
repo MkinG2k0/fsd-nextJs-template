@@ -1,6 +1,4 @@
 import { Card } from 'antd'
-import { Layout } from 'entities/layout'
-import style from './Todo.module.scss'
 
 export const Todo: FC<Res_Todo.Base> = ({ title, completed }) => {
 	return (

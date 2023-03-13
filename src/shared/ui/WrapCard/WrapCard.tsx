@@ -1,6 +1,7 @@
 import { Card } from 'antd'
-import { cn } from 'Helper/Style'
-import { FC, ReactNode } from 'react'
+import { ReactNode } from 'react'
+
+import { cn } from 'shared/lib/cn'
 
 interface BlockProps {
 	heading: ReactNode

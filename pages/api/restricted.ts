@@ -1,7 +1,8 @@
 import { getServerSession } from 'next-auth/next'
+
 import { authOptions } from './auth/[...nextauth]'
 
-export default async (req, res) => {
+const restricted = async (req, res) => {
 	const session = await getServerSession(req, res, authOptions)
 	if (session) {
 		res.send({
@@ -10,7 +11,10 @@ export default async (req, res) => {
 		})
 	} else {
 		res.send({
-			error: 'You must be signed in to view the protected content on this page.',
+			error:
+				'You must be signed in to view the protected content on this page.',
 		})
 	}
 }
+
+export default restricted

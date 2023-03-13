@@ -8,14 +8,26 @@ interface WrapTableProps extends TableProps<{}> {
 	isSelected?: boolean
 }
 
-export const WrapTable: FC<WrapTableProps> = ({ children, onClickRow, isManySelected, isSelected, ...table }) => {
-	const onClick = (event: React.MouseEvent<any, MouseEvent>, record: Record<string, any>, rowIndex?: number) => {
+export const WrapTable: FC<WrapTableProps> = ({
+	children,
+	onClickRow,
+	isManySelected,
+	isSelected,
+	...table
+}) => {
+	const onClick = (
+		event: React.MouseEvent<any, MouseEvent>,
+		record: Record<string, any>,
+		rowIndex?: number,
+	) => {
 		if (isSelected) {
 			// @ts-ignore
 			const parentElement = event.target.parentElement as HTMLElement
 
 			if (!isManySelected) {
-				const elements = Array.from(document.getElementsByClassName('tableRowChecked'))
+				const elements = Array.from(
+					document.getElementsByClassName('tableRowChecked'),
+				)
 				elements.map((item) => {
 					if (item !== parentElement) {
 						item.classList.remove('tableRowChecked')

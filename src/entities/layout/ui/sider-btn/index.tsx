@@ -1,10 +1,9 @@
 import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons'
 import { Button } from 'antd'
-import { store } from 'core/store'
-import { GetLayout, setSideCollapsed } from 'entities/layout'
 import { FC } from 'react'
 
-import style from './siderBtn.module.scss'
+import { store } from 'core/store'
+import { GetLayout, setSideCollapsed } from 'entities/layout'
 
 interface sideBtnProps {}
 

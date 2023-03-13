@@ -1,13 +1,21 @@
 import { Form, FormProps } from 'antd'
-import { useFormData } from 'Hook/Form'
-import { FC, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
+
+import { useFormData } from 'shared/hook/Form'
 
 interface WrapFormProps extends FormProps {
 	inputDelay?: number
 	formData?: TObject
 }
 
-export const WrapForm: FC<WrapFormProps> = ({ children, onFieldsChange, inputDelay, form, formData, ...formProps }) => {
+export const WrapForm: FC<WrapFormProps> = ({
+	children,
+	onFieldsChange,
+	inputDelay,
+	form,
+	formData,
+	...formProps
+}) => {
 	const [time, setTime] = useState<NodeJS.Timeout | undefined>(undefined)
 
 	useEffect(() => {
@@ -18,7 +26,10 @@ export const WrapForm: FC<WrapFormProps> = ({ children, onFieldsChange, inputDel
 
 	useFormData(form, formData)
 
-	const handleFieldsChange: FormProps['onFieldsChange'] = (changedFields, allFields) => {
+	const handleFieldsChange: FormProps['onFieldsChange'] = (
+		changedFields,
+		allFields,
+	) => {
 		clearInterval(time)
 
 		const startTime = setTimeout(() => {
@@ -29,7 +40,12 @@ export const WrapForm: FC<WrapFormProps> = ({ children, onFieldsChange, inputDel
 	}
 
 	return (
-		<Form layout={'vertical'} onFieldsChange={handleFieldsChange} form={form} {...formProps}>
+		<Form
+			layout={'vertical'}
+			onFieldsChange={handleFieldsChange}
+			form={form}
+			{...formProps}
+		>
 			{children}
 		</Form>
 	)

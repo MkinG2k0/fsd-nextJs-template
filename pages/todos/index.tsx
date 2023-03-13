@@ -1,20 +1,15 @@
-import { dispatch } from 'core/store'
-import { GetTodo, useGetTodoQuery } from 'features/todo'
-import { getTodos } from 'features/todo/model/thunk'
-import { GetServerSideProps } from 'next'
-import { Todos } from 'pages/todos'
-import { Test, wrapSSPWithRedux } from 'shared/lib/server'
+import { useGetTodoQuery } from 'features/todo'
 
 // export const getServerSideProps: GetServerSideProps = () =>
 // 	wrapSSPWithRedux([store.dispatch(getTodos(true))])
 
-export const getServerSideProps: GetServerSideProps = async () =>
-	Test(
-		{
-			todo: { todos: true },
-		},
-		[await dispatch(getTodos())],
-	)
+// export const getServerSideProps: GetServerSideProps = async () =>
+// 	Test(
+// 		{
+// 			todo: { todos: true },
+// 		},
+// 		[await dispatch(getTodos())],
+// 	)
 
 // export const getServerSideProps: GetServerSideProps = async () => {
 // 	return {
