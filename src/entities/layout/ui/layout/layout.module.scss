@@ -1,0 +1,9 @@
+.wrap {
+	@apply flex flex-col gap-4;
+	min-height: 100vh;
+
+	.content {
+		@apply flex-1;
+		padding: 0 clamp(0.5rem, 5vw, 10rem);
+	}
+}

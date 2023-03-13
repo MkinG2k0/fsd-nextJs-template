@@ -1,0 +1,66 @@
+{
+  "templates": {
+    "ssr-page": {
+      "template": "src/shared/templates/SSRPage",
+      "generate": "pages/"
+    },
+    "ssg-page": {
+      "template": "src/shared/templates/SSGPage",
+      "generate": "pages/"
+    },
+    "page": {
+      "template": "src/shared/templates/page",
+      "generate": "src/pages/"
+    },
+    "ui": {
+      "template": "src/shared/templates/comp",
+      "generate": "src/shared/ui/"
+    },
+    "page-ui": {
+      "template": "src/shared/templates/comp",
+      "generate": "src/Pages/*/ui/"
+    },
+    "widget": {
+      "template": "src/shared/templates/widget",
+      "generate": "src/widget/"
+    },
+    "widget-ui": {
+      "template": "src/shared/templates/comp",
+      "generate": "src/widget/*/ui/"
+    },
+    "widget-api": {
+      "template": "src/shared/templates/api",
+      "generate": "src/widget/*/api"
+    },
+    "entities": {
+      "template": "src/shared/templates/entities",
+      "generate": "src/entities/"
+    },
+    "entities-ui": {
+      "template": "src/shared/templates/comp",
+      "generate": "src/entities/*/ui/"
+    },
+    "entities-api": {
+      "template": "src/shared/templates/api",
+      "generate": "src/entities/*/api"
+    },
+    "feature-api": {
+      "template": "src/shared/templates/api",
+      "generate": "src/features/*/api"
+    },
+    "feature": {
+      "template": "src/shared/templates/feature",
+      "generate": "src/features/"
+    },
+    "feature-ui": {
+      "template": "src/shared/templates/comp",
+      "generate": "src/features/*/ui/"
+    }
+  },
+  "replaceExt": [
+    [
+      "txt",
+      "tsx"
+    ]
+  ]
+}

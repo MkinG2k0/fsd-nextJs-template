@@ -1,0 +1,16 @@
+import { GetServerSideProps } from 'next'
+import { FileName } from 'pages/FileName'
+
+export const getServerSideProps: GetServerSideProps = async () => {
+	return {
+		props: {},
+	}
+}
+
+export interface FileNamePageProps extends FileName {}
+
+const FileName: FC<FileNamePageProps> = ({}) => {
+	return <div>FileName</div>
+}
+
+export default FileName
