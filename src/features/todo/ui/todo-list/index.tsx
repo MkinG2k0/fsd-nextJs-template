@@ -3,7 +3,7 @@ import { Map } from 'react-easy-map'
 import { Todo } from 'features/todo/ui/todo'
 
 export interface TodoListProps {
-	todos: Res_Todo.Base[]
+	todos?: Res_Todo.Base[]
 }
 
 export const TodoList: FC<TodoListProps> = ({ todos }) => {

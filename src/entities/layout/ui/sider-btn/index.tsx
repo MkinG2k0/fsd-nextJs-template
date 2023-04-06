@@ -1,6 +1,6 @@
-import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons'
-import { Button } from 'antd'
 import { FC } from 'react'
+import { Button } from '@mui/material'
+import MenuIcon from '@mui/icons-material/Menu'
 
 import { store } from 'core/store'
 import { GetLayout, setSideCollapsed } from 'entities/layout'
@@ -15,13 +15,14 @@ export const SiderBtn: FC<sideBtnProps> = ({}) => {
 	}
 
 	return (
-		<div className={'clBtn bg-gray-800 flex p-4 w-20'}>
-			<Button
-				onClick={onCollapse}
-				type={'link'}
-				className={'align-top text-white'}
-			>
-				{sideCollapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+		<div
+			className={
+				'bg-gray-800 flex items-center justify-center w-20 flex-grow-0 flex-shrink-0'
+			}
+		>
+			<Button onClick={onCollapse} className={'align-top text-white'}>
+				<MenuIcon />
+				{/*{sideCollapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}*/}
 			</Button>
 		</div>
 	)

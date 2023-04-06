@@ -7,7 +7,7 @@ export const persistedReducer = persistReducer(
 	{
 		key: 'root',
 		storage,
-		whitelist: ['auth'],
+		whitelist: ['auth', 'layout'],
 	},
 	rootReducer,
 )

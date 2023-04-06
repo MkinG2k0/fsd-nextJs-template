@@ -3,15 +3,15 @@ import { createSlice } from '@reduxjs/toolkit'
 import { initialState } from './init'
 import { reducers } from './reducers'
 
-import { extraReducers } from 'features/todo/model/extraReducers'
+import { extraReducers } from 'features/todo/model/extra-reducers'
 
-const Index = createSlice({
+const slice = createSlice({
 	name: 'Todo',
 	initialState,
 	reducers,
 	extraReducers,
 })
 
-export const { setTodos } = Index.actions
+export const { setTodos } = slice.actions
 
-export const todo = Index.reducer
+export const todo = slice.reducer

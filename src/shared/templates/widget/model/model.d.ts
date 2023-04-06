@@ -1,3 +1,0 @@
-interface FileNameModel {
-	data: any
-}

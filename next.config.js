@@ -5,6 +5,11 @@ const nextConfig = {
 	images: {
 		domains: [],
 	},
+	// compiler: {
+	// 	removeConsole: {
+	// 		exclude: ['error', 'warn'],
+	// 	},
+	// },
 }
 
 module.exports = nextConfig

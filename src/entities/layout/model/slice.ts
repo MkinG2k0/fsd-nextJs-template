@@ -3,12 +3,12 @@ import { createSlice } from '@reduxjs/toolkit'
 import { initialState } from './init'
 import { reducers } from './reducers'
 
-const Index = createSlice({
+const slice = createSlice({
 	name: 'layout',
 	initialState,
 	reducers,
 })
 
-export const { setSideCollapsed } = Index.actions
+export const { setSideCollapsed } = slice.actions
 
-export const layout = Index.reducer
+export const layout = slice.reducer

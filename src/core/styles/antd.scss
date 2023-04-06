@@ -1,5 +1,9 @@
 .ant-btn-primary {
 	background: #1677ff;
+
+	&:hover {
+		background: #1565c0;
+	}
 }
 
 .ant-table-row {
@@ -23,4 +27,7 @@
 .ant-menu-item {
 	display: flex !important;
 	align-items: center;
+	//justify-content: center;
+	//padding: .5rem !important;
 }
+

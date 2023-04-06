@@ -1,9 +1,16 @@
 .wrap {
-	@apply flex flex-col gap-4;
-	min-height: 100vh;
+	@apply flex flex-col min-h-[100vh] bg-gray-800;
+
+	.header {
+	}
+
+	.footer {
+	}
 
 	.content {
-		@apply flex-1;
-		padding: 0 clamp(0.5rem, 5vw, 10rem);
+		@apply flex-1 bg-gray-800 p-2;
+		grid-area: C;
+
+		//padding: 0 clamp(0.5rem, 5vw, 10rem);
 	}
 }

@@ -1,5 +1,5 @@
 import { api } from 'core/store/config/api'
-import { Req } from 'shared/Interface/Axios'
+import { Req } from 'shared/interface/axios'
 import { TodoRoute, ExampleRoute } from 'shared/constant/routes'
 import { http } from 'shared/lib/axios/http'
 

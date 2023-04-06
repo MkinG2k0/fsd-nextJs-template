@@ -1,12 +1,21 @@
-import { Skeleton } from 'antd'
+// import { Skeleton } from 'antd'
 import { PersistGate } from 'redux-persist/integration/react'
 
-import { persist } from 'core/store/config/persist'
+import { useClient } from 'shared/hook/Server'
+import { persist } from 'core/store'
 
-export const WithPersist = (component: FC) => (props) =>
-	(
-		// @ts-ignore
-		<PersistGate persistor={persist} loading={<Skeleton />}>
-			{component(props)}
-		</PersistGate>
-	)
+export const WithPersist = (component: FC) => (props) => {
+	// eslint-disable-next-line react-hooks/rules-of-hooks
+	const isClient = useClient()
+
+	if (isClient) {
+		return (
+			// @ts-ignore
+			<PersistGate persistor={persist} loading={null}>
+				{component(props)}
+			</PersistGate>
+		)
+	}
+
+	return <>{component(props)}</>
+}

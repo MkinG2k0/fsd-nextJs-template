@@ -17,6 +17,6 @@ export const getStorage = <T>(name: string, or: T) => {
 
 export const setStorage = (name: string, data: any) => {
 	if (isClient()) {
-		localStorage.setItem(name, data)
+		localStorage.setItem(name, JSON.stringify(data))
 	}
 }

@@ -1,22 +1,21 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { setupListeners } from '@reduxjs/toolkit/query'
 
-import middleware from './middleware'
+// use middleware
 
 import { persistedReducer } from 'core/store/config/persist-reducer'
+import { serializable } from 'core/store/middleware/serializable'
+import { api } from 'core/store/config/api'
+import { rtkQueryAuthMiddleware } from 'core/store/middleware/auth'
 
-const createStore = (preloadedState?: any) =>
-	configureStore({
-		reducer: persistedReducer,
-		middleware,
-		preloadedState,
-	})
+export const store = configureStore({
+	reducer: persistedReducer,
+	middleware: (getDefaultMiddleware) =>
+		getDefaultMiddleware(serializable)
+			.concat(api.middleware)
+			.concat(rtkQueryAuthMiddleware),
+})
 
-export let store: ReturnType<typeof createStore> = createStore()
-
-export function getStore(preloadedState?: RootState) {
-	store = createStore(preloadedState)
-	return store
-}
+// TODO middleware error types
 
 setupListeners(store.dispatch)

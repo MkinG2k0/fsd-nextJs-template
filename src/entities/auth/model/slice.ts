@@ -3,12 +3,12 @@ import { createSlice } from '@reduxjs/toolkit'
 import { initialState } from './init'
 import { reducers } from './reducers'
 
-const Index = createSlice({
+const slice = createSlice({
 	name: 'auth',
 	initialState,
 	reducers,
 })
 
-export const { setAuth } = Index.actions
+export const { setAuth } = slice.actions
 
-export const auth = Index.reducer
+export const auth = slice.reducer

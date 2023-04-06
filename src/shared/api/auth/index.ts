@@ -1,4 +1,4 @@
-import { Req } from 'shared/Interface/Axios'
+import { Req } from 'shared/interface/axios'
 import { AuthRoute } from 'shared/constant/routes'
 import { http } from 'shared/lib/axios/http'
 
