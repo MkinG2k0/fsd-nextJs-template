@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { Button } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
 
-import { store } from 'core/store'
+import { store } from 'core'
 import { LayoutSlice } from 'entities/layout'
 
 interface sideBtnProps {}

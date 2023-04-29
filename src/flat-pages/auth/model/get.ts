@@ -1,3 +1,3 @@
-import { useStore } from 'shared/hook/Redux'
+import { useStore } from 'shared'
 
-export const Getauth = () => useStore((state) => state['auth'])
+export const GetAuth = () => useStore((state) => state['auth'])

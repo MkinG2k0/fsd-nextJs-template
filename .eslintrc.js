@@ -1,40 +1,42 @@
 module.exports = {
-	parser: '@typescript-eslint/parser',
-	parserOptions: {
-		ecmaVersion: 2020,
-		sourceType: 'module',
-		projects: ['./tsconfig.json'],
-	},
-	globals: {
-		React: 'readonly',
-	},
-	settings: {
-		react: {
-			version: 'detect',
-		},
+	env: {
+		browser: true,
+		es2021: true,
+		node: true,
 	},
 	extends: [
-		'next',
-		// 'next/core-web-vitals',
 		'eslint:recommended',
-		'@feature-sliced',
 		'plugin:react/recommended',
+		'plugin:@typescript-eslint/recommended',
+		'next',
+		'@feature-sliced',
 		'plugin:react-hooks/recommended',
 		'plugin:import/warnings',
 		'plugin:import/typescript',
-		'plugin:eslint-comments/recommended',
 	],
-	plugins: ['import'],
+	overrides: [],
+	parser: '@typescript-eslint/parser',
+	parserOptions: {
+		ecmaVersion: 'latest',
+		sourceType: 'module',
+	},
+	plugins: ['react', '@typescript-eslint'],
 	rules: {
-		quotes: ['off', 'single'],
-		indent: ['warn', 'tab'],
-		'comma-dangle': ['warn', 'always-multiline'],
-		'no-unused-vars': 'off',
-		'no-undef': ['off'],
-		'no-empty-pattern': ['off'],
-		'boundaries/element-types': ['off'],
-		'no-mixed-spaces-and-tabs': ['off'],
-
+		indent: ['error', 'tab'],
+		quotes: ['error', 'single'],
+		semi: ['error', 'never'],
+		//
+		'comma-dangle': [
+			// последняя запятая в массивах ...
+			1,
+			{
+				arrays: 'always-multiline',
+				objects: 'always-multiline',
+				imports: 'always-multiline',
+				exports: 'never',
+				functions: 'never',
+			},
+		],
 		'import/order': [
 			'warn',
 			{
@@ -59,32 +61,13 @@ module.exports = {
 						group: 'builtin',
 					},
 				],
-				// alphabetize: {
-				// 	order: 'asc', /* sort in ascending order. Options: ['ignore', 'asc', 'desc'] */
-				// 	caseInsensitive: true /* ignore case. Options: [true, false] */
-				// }
 			},
 		],
-
-		'react/prop-types': 'off',
-		'react/jsx-uses-react': 'off',
-		'react/react-in-jsx-scope': 'off',
-		'react/display-name': 'off',
-
-		'@typescript-eslint/no-unused-vars': 'off',
-		'@typescript-eslint/no-var-requires': 'off',
-		'@typescript-eslint/explicit-module-boundary-types': 'off',
-		'@typescript-eslint/no-empty-function': ['off'],
-		'@typescript-eslint/no-empty-interface': ['off'],
-		'@typescript-eslint/ban-ts-comment': ['off'],
-		'@typescript-eslint/ban-types': 'off',
-
-		'import/first': 'warn',
-		'import/newline-after-import': 'warn',
-		'import/no-duplicates': 'warn',
-
-		'react-hooks/exhaustive-deps': 'off',
-
-		'import/no-internal-modules': 'off',
+		// off
+		'@typescript-eslint/no-empty-interface': [0], // разрешаем пустые интерфейсы
+		'react/react-in-jsx-scope': [0], // разрешаем глобальный реакт
+		'no-empty-pattern': [0], // разрешаем пустую деструктуризацию "{}"
+		'react/prop-types': [0], // выключаем проверку на типизацию пропсов
+		'react/display-name': [0], // разрешаем компонетну возращать калбэк , пример "/src/core/providers/*"
 	},
 }

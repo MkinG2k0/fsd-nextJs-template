@@ -1,6 +1,6 @@
 import { isClient } from 'shared/lib/server'
 
-export const getStorage = <T>(name: string, or: T) => {
+const get = <T>(name: string, or: T) => {
 	let data: T = or
 
 	if (isClient()) {
@@ -15,8 +15,13 @@ export const getStorage = <T>(name: string, or: T) => {
 	return data
 }
 
-export const setStorage = (name: string, data: any) => {
+export const set = (name: string, data: any) => {
 	if (isClient()) {
 		localStorage.setItem(name, JSON.stringify(data))
 	}
+}
+
+export const LocalStorage = {
+	get,
+	set,
 }

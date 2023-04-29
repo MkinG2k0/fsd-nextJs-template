@@ -1,2 +1,2 @@
-export * from 'shared/lib/server/ssp'
+export * from './server-side-props'
 export * from './in-client'

@@ -1,7 +1,8 @@
-import { NextApiRequest, NextApiResponse } from 'next'
+type NextApiRequest = import('next').NextApiRequest
+type NextApiResponse = import('next').NextApiResponse
 
-export interface ApiRequest<Body = any> extends NextApiRequest {
+ interface ApiRequest<Body = any> extends NextApiRequest {
 	body: Body
 }
 
-export type ApiResponse<T> = NextApiResponse<T>
+ type ApiResponse<T> = NextApiResponse<T>

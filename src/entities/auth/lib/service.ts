@@ -1,4 +1,4 @@
-import { dispatch } from 'core/store'
+import { dispatch } from 'core'
 import { RAuth, AuthSlice } from 'entities/auth'
 
 export const authService = {

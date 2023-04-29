@@ -1,7 +1,6 @@
 import axios from 'axios'
 
-import { setToken } from 'shared/lib/auth'
-import { AUTH_STATUS } from 'shared/constant/auth'
+import { TokenService, AUTH_STATUS } from 'shared'
 
 export const http = axios.create({
 	baseURL: process.env.NEXT_PUBLIC_URL_ENDPOINT,
@@ -20,18 +19,18 @@ http.interceptors.request.use(
 
 		return config
 	},
-	(error) => Promise.reject(error),
+	(error) => Promise.reject(error)
 )
 
 http.interceptors.response.use(
 	(response) => response,
 	(error) => {
 		if (AUTH_STATUS.includes(error?.response?.status)) {
-			setToken('')
+			TokenService.set('set')
 			// TODO Next Navigate
 			// navigate(NAV.AUTH)
 		}
 
 		return Promise.reject(error)
-	},
+	}
 )

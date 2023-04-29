@@ -1,5 +1,6 @@
 import { getServerSession } from 'next-auth/next'
 
+// eslint-disable-next-line import/no-internal-modules
 import { authOptions } from './auth/[...nextauth]'
 
 const restricted = async (req, res) => {

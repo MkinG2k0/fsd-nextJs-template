@@ -1,5 +1,7 @@
-import { AxiosResponse } from 'axios'
+type AxiosResponse = import('axios').AxiosResponse
+
+
 
 type AxiosReq<T> = Promise<AxiosResponse<T>>
 
-type Req<T> = Promise<AxiosResponse<ReqWrap<T>>>
+type AxiosReqWrap<T> = Promise<AxiosResponse<AxiosReqWrap<T>>>

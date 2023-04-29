@@ -1,19 +1,19 @@
 import { ActionReducerMapBuilder } from '@reduxjs/toolkit'
 
-import { getFileNameAll } from './thunk'
+import { fetchFileNameAll } from './thunk'
 import { TFileName } from './types'
 
 import { setStatus, hydrate } from 'shared/lib/redux'
 
 export const extraReducers = (builder: ActionReducerMapBuilder<TFileName>) => {
 	builder
-		.addCase(getFileNameAll.pending, (state, action) => {
+		.addCase(fetchFileNameAll.pending, (state, action) => {
 			setStatus(state.data, action)
 		})
-		.addCase(getFileNameAll.rejected, (state, action) => {
+		.addCase(fetchFileNameAll.rejected, (state, action) => {
 			setStatus(state.data, action)
 		})
-		.addCase(getFileNameAll.fulfilled, (state, action) => {
+		.addCase(fetchFileNameAll.fulfilled, (state, action) => {
 			const { payload } = action
 			setStatus(state.data, action)
 

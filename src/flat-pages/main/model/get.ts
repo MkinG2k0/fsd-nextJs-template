@@ -1,3 +1,3 @@
-import { useStore } from 'shared/hook/Redux'
+import { useStore } from 'shared'
 
 export const Getmain = () => useStore((state) => state['main'])

@@ -1,6 +1,6 @@
 import { AnyAction, AsyncThunkAction } from '@reduxjs/toolkit'
 
-import { store } from 'core/store/store'
+import { store } from 'core'
 
 export const dispatch = (func: AnyAction | AsyncThunkAction<any, any, any>) =>
 	store.dispatch(func)

@@ -1,5 +1,5 @@
-// export * from './api'
+export * from './api'
 export * from './persist'
 export * from './persist-reducer'
-export * from './rootReducer'
+export * from './root-reducer'
 export * from './storage'

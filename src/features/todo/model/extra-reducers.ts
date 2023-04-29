@@ -1,19 +1,19 @@
 import { ActionReducerMapBuilder } from '@reduxjs/toolkit'
 
-import { getTodos } from './thunk'
+import { fetchTodos } from './thunk'
 import { TodoModel } from './model'
 
 import { hydrate, setStatus } from 'shared/lib/redux'
 
 export const extraReducers = (builder: ActionReducerMapBuilder<TodoModel>) => {
 	builder
-		.addCase(getTodos.pending, (state, action) => {
+		.addCase(fetchTodos.pending, (state, action) => {
 			setStatus(state.todos, action)
 		})
-		.addCase(getTodos.rejected, (state, action) => {
+		.addCase(fetchTodos.rejected, (state, action) => {
 			setStatus(state.todos, action)
 		})
-		.addCase(getTodos.fulfilled, (state, action) => {
+		.addCase(fetchTodos.fulfilled, (state, action) => {
 			const { payload } = action
 			setStatus(state.todos, action)
 

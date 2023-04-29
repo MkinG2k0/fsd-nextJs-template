@@ -1,4 +1,4 @@
-import { api } from 'core/store/config/api'
+import { api } from 'core'
 
 export const addTagTypes = ['Products API'] as const
 const injectedRtkApi = api
@@ -12,7 +12,7 @@ const injectedRtkApi = api
 				ProductsControllerCreate_arg
 			>({
 				query: (queryArg) => ({
-					url: `/products/create`,
+					url: '/products/create',
 					method: 'POST',
 					body: queryArg.createProductDto,
 				}),
@@ -23,7 +23,7 @@ const injectedRtkApi = api
 				ProductsControllerFindAll_arg
 			>({
 				query: (queryArg) => ({
-					url: `/products`,
+					url: '/products',
 					params: {
 						take: queryArg.take,
 						skip: queryArg.skip,
@@ -36,7 +36,7 @@ const injectedRtkApi = api
 				ProductsControllerBarcode_res,
 				ProductsControllerBarcode_arg
 			>({
-				query: () => ({ url: `/products/barcode` }),
+				query: () => ({ url: '/products/barcode' }),
 				providesTags: ['Products API'],
 			}),
 			productsControllerFindOne: build.query<
@@ -83,7 +83,7 @@ const injectedRtkApi = api
 				ProductsControllerSearchByBarcode_arg
 			>({
 				query: (queryArg) => ({
-					url: `/products/search`,
+					url: '/products/search',
 					params: {
 						name: queryArg.name,
 						barcode: queryArg.barcode,
@@ -98,7 +98,7 @@ const injectedRtkApi = api
 				ProductsControllerGetUnitType_res,
 				ProductsControllerGetUnitType_arg
 			>({
-				query: () => ({ url: `/products/unit-types` }),
+				query: () => ({ url: '/products/unit-types' }),
 				providesTags: ['Products API'],
 			}),
 			productsControllerCreateCustomField: build.mutation<
@@ -128,7 +128,7 @@ const injectedRtkApi = api
 				ProductsControllerExcel_arg
 			>({
 				query: (queryArg) => ({
-					url: `/products/excel`,
+					url: '/products/excel',
 					method: 'POST',
 					body: queryArg.body,
 				}),
@@ -139,7 +139,7 @@ const injectedRtkApi = api
 				ProductsControllerImport_arg
 			>({
 				query: (queryArg) => ({
-					url: `/products/import`,
+					url: '/products/import',
 					method: 'POST',
 					body: queryArg.body,
 				}),
@@ -150,7 +150,7 @@ const injectedRtkApi = api
 				ProductsControllerManualImport_arg
 			>({
 				query: (queryArg) => ({
-					url: `/products/importman`,
+					url: '/products/importman',
 					method: 'POST',
 					body: queryArg.body,
 				}),
@@ -161,7 +161,7 @@ const injectedRtkApi = api
 				ProductsControllerBulkUpdate_arg
 			>({
 				query: (queryArg) => ({
-					url: `/products/bulkupdate`,
+					url: '/products/bulkupdate',
 					method: 'PUT',
 					body: queryArg.bulkUpdateDto,
 				}),

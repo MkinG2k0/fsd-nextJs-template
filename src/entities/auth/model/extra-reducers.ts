@@ -1,10 +1,10 @@
 import { ActionReducerMapBuilder } from '@reduxjs/toolkit'
 
 import { authModel } from './types'
+import { fetchLogin, fetchRefresh } from './thunk'
 
-import { TokenService } from 'entities/auth/lib/token'
-import { fetchLogin, fetchRefresh } from 'entities/auth/model/thunk'
 import { setStatus } from 'shared/lib/redux'
+import { TokenService } from 'shared'
 
 export const extraReducers = (builder: ActionReducerMapBuilder<authModel>) => {
 	builder

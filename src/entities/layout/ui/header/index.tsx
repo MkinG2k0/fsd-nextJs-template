@@ -1,6 +1,6 @@
 // import { MenuItems } from 'entities/layout/config/menu'
 
-import { SiderBtn } from 'entities/layout/ui/sider-btn'
+import { SiderBtn } from '../sider-btn'
 
 interface HeaderProps {}
 

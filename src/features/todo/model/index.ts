@@ -1,6 +1,7 @@
 import { slice } from './slice'
-import { GetTodo } from './get'
+import { getTodo } from './get'
+import { fetch } from './thunk'
 
 export const { reducer: todo } = slice
 
-export const TodoSlice = { ...slice.actions, ...GetTodo }
+export const TodoSlice = { ...slice.actions, ...getTodo, ...fetch }

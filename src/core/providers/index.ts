@@ -11,5 +11,5 @@ export const withProviders = compose(
 	WithPersist,
 	WithSession,
 	WithLayout,
-	WidthNextComp,
+	WidthNextComp
 )

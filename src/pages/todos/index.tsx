@@ -1,11 +1,12 @@
 import { GetServerSideProps } from 'next'
 
-import { ReduxSSP } from 'shared/lib/redux'
-import { getTodos } from 'features/todo/model/thunk'
+// eslint-disable-next-line import/no-internal-modules
 import { Todos } from 'flat-pages/todos'
+import { ReduxSSP } from 'shared/lib/redux'
+import { TodoSlice } from 'features/todo'
 
 export const getServerSideProps: GetServerSideProps = ReduxSSP((store) => ({
-	promise: [store.dispatch(getTodos())],
+	promise: [store.dispatch(TodoSlice.fetchTodos())],
 }))
 
 const TodosPage: FC = () => {

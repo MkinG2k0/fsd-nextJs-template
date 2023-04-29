@@ -34,7 +34,6 @@ export const Sider: FC<SiderProps> = ({}) => {
 	)
 }
 
-const width = 80
 
 export const SiderLoad: FC = () => {
 	return <div className={'bg-gray-900 w-20'}></div>

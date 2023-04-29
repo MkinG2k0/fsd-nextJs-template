@@ -1,9 +1,8 @@
-import { api } from 'core/store/config/api'
-import { Req } from 'shared/interface/axios'
-import { TodoRoute, ExampleRoute } from 'shared/constant/routes'
+import { api } from 'core'
+import { TodoRoute, ExampleRoute } from 'shared'
 import { http } from 'shared/config/axios'
 
-const getAll = (data: Req_Todo.Base): Req<Res_Todo.Base[]> =>
+const getAll = (data: Req_Todo.Base): AxiosReqWrap<Res_Todo.Base[]> =>
 	http.get(TodoRoute.get, data)
 
 export const RTodo = {
@@ -18,12 +17,12 @@ const Todo = api.injectEndpoints({
 			providesTags: (result) =>
 				result
 					? [
-							...result.data.map(({ id }) => ({
-								type: 'FileName' as const,
-								id,
-							})),
-							{ type: 'FileName', id: 'FileName-LIST' },
-					  ]
+						...result.data.map(({ id }) => ({
+							type: 'FileName' as const,
+							id,
+						})),
+						{ type: 'FileName', id: 'FileName-LIST' },
+					]
 					: [{ type: 'FileName', id: 'FileName-LIST' }],
 		}),
 		// GET: Get by id

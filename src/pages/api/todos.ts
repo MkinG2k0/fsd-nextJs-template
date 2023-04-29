@@ -1,12 +1,13 @@
 import { getServerSession } from 'next-auth/next'
 
+// eslint-disable-next-line import/no-internal-modules
 import { authOptions } from './auth/[...nextauth]'
 
-import { ApiRequest, ApiResponse } from 'shared/interface/next'
+// import { ApiRequest, ApiResponse } from 'shared'
 
 export default async function handler(
 	req: ApiRequest<any>,
-	res: ApiResponse<ReqWrap<Res_Todo.Base[]>>,
+	res: ApiResponse<AxiosReqWrap<Res_Todo.Base[]>>
 ) {
 	const session = await getServerSession(req, res, authOptions)
 
@@ -18,3 +19,4 @@ export default async function handler(
 		],
 	})
 }
+

@@ -1,12 +1,12 @@
 import { GetServerSidePropsContext } from 'next'
 
-import { wrapper } from 'core/store'
-import { HeaderProps } from 'shared/constant/HeaderProps'
+import { wrapper } from 'core'
+import { headerProps } from 'shared'
 
 type propCall = (
 	store: AppStore,
 	ctx: GetServerSidePropsContext,
-) => { props?: Object; promise: Promise<any>[] }
+) => { props?: object; promise: Promise<any>[] }
 
 export const ReduxSSP = (func: propCall) => {
 	return (ctx) =>
@@ -14,7 +14,7 @@ export const ReduxSSP = (func: propCall) => {
 			const resultFunc = func(store, ctx)
 			const promise = resultFunc.promise || []
 			const props = resultFunc.props || {}
-			const mergePromise = [...HeaderProps(store), ...promise]
+			const mergePromise = [...headerProps(store), ...promise]
 
 			await Promise.all(mergePromise)
 
