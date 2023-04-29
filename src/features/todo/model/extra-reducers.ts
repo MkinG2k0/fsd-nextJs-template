@@ -1,7 +1,8 @@
 import { ActionReducerMapBuilder } from '@reduxjs/toolkit'
 
-import { getTodos } from 'features/todo/model/thunk'
-import { TodoModel } from 'features/todo/model/model'
+import { getTodos } from './thunk'
+import { TodoModel } from './model'
+
 import { hydrate, setStatus } from 'shared/lib/redux'
 
 export const extraReducers = (builder: ActionReducerMapBuilder<TodoModel>) => {

@@ -1,7 +1,7 @@
 import { api } from 'core/store/config/api'
 import { Req } from 'shared/interface/axios'
 import { TodoRoute, ExampleRoute } from 'shared/constant/routes'
-import { http } from 'shared/lib/axios/http'
+import { http } from 'shared/config/axios'
 
 const getAll = (data: Req_Todo.Base): Req<Res_Todo.Base[]> =>
 	http.get(TodoRoute.get, data)
@@ -18,11 +18,11 @@ const Todo = api.injectEndpoints({
 			providesTags: (result) =>
 				result
 					? [
-						...result.data.map(({ id }) => ({
-							type: 'FileName' as const,
-							id,
-						})),
-						{ type: 'FileName', id: 'FileName-LIST' },
+							...result.data.map(({ id }) => ({
+								type: 'FileName' as const,
+								id,
+							})),
+							{ type: 'FileName', id: 'FileName-LIST' },
 					  ]
 					: [{ type: 'FileName', id: 'FileName-LIST' }],
 		}),

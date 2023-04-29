@@ -1,4 +1,4 @@
-import style from './FileName.module.scss'
+import style from './style.module.scss'
 
 interface FileNameProps {}
 

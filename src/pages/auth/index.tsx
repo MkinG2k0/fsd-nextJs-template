@@ -1,12 +1,15 @@
-import { GetServerSideProps } from 'next'
+import { GetServerSideProps, NextPage } from 'next'
 
-import { ReduxSSP } from 'shared/lib/redux'
-import { Auth } from 'flat-pages/auth'
-
-export const getServerSideProps: GetServerSideProps = ReduxSSP((store) => ({
-	promise: [],
-}))
-
-export default function Index() {
-	return <Auth />
+export const getServerSideProps: GetServerSideProps = async () => {
+	return {
+		props: {},
+	}
 }
+
+export interface authPageProps {}
+
+const auth: NextPage<authPageProps> = ({}) => {
+	return <div>auth</div>
+}
+
+export default auth

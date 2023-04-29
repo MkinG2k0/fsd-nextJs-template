@@ -1,3 +1,3 @@
-interface layoutModel {
+interface ILayout {
 	sideCollapsed: boolean
 }

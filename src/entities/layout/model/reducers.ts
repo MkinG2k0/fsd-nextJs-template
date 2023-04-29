@@ -2,7 +2,7 @@ import { PayloadAction } from '@reduxjs/toolkit'
 
 export const reducers = {
 	setSideCollapsed(
-		state: layoutModel,
+		state: ILayout,
 		{ payload }: PayloadAction<boolean | undefined>,
 	) {
 		if (payload) {

@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 import { FC } from 'react'
 import { usePathname } from 'next/navigation'
 
-import { GetLayout } from 'entities/layout'
+import { LayoutSlice } from 'entities/layout'
 
 // import { MenuItems } from 'entities/layout/config/menu'
 
@@ -12,8 +12,7 @@ export const Sider: FC<SiderProps> = ({}) => {
 	const path = usePathname()
 	const router = useRouter()
 
-	const { sideCollapsed } = GetLayout()
-
+	const { sideCollapsed } = LayoutSlice.useGet()
 	// const onClickMenu: MenuProps['onClick'] = ({ key }) => {
 	// 	router.push(key)
 	// }

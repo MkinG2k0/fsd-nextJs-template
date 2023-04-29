@@ -1,3 +1,3 @@
-export const initialState: layoutModel = {
+export const initialState: ILayout = {
 	sideCollapsed: true,
 }

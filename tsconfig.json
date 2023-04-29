@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
     "baseUrl": "src",
+    "target": "ESNext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "jsx": "preserve",
     "noImplicitAny": false,
     "allowJs": true,
     "skipLibCheck": true,
@@ -8,30 +12,22 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
     "incremental": true,
     "types": [
       "node"
     ],
     "paths": {
-      "entities/*": [
-        "entities/*"
-      ]
+      "entities/*":["entities/*"]
     },
-    "target": "es5",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
     "plugins": [
-      {
-        "name": "next"
-      }
+
     ]
   },
   "include": [

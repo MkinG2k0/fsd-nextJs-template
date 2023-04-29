@@ -1,58 +1,58 @@
 {
   "templates": {
-    "ssr-page": {
-      "template": "src/shared/templates/SSRPage",
-      "generate": "pages/"
-    },
-    "ssg-page": {
-      "template": "src/shared/templates/SSGPage",
-      "generate": "pages/"
-    },
-    "page": {
-      "template": "src/shared/templates/page",
-      "generate": "src/pages/"
-    },
     "ui": {
       "template": "src/shared/templates/comp",
       "generate": "src/shared/ui/"
     },
+    "page-ssr": {
+      "template": "src/shared/templates/ssr-page",
+      "generate": "src/pages/*/"
+    },
+    "page-ssg": {
+      "template": "src/shared/templates/ssg-page",
+      "generate": "src/pages/*/"
+    },
+    "page": {
+      "template": "src/shared/templates/page",
+      "generate": "src/flat-pages/"
+    },
     "page-ui": {
       "template": "src/shared/templates/comp",
-      "generate": "src/Pages/*/ui/"
+      "generate": "src/flat-pages/*/ui/"
     },
-    "widget": {
+    "wid": {
       "template": "src/shared/templates/widget",
       "generate": "src/widget/"
     },
-    "widget-ui": {
+    "wid-ui": {
       "template": "src/shared/templates/comp",
       "generate": "src/widget/*/ui/"
     },
-    "widget-api": {
+    "wid-api": {
       "template": "src/shared/templates/api",
       "generate": "src/widget/*/api"
     },
-    "entities": {
+    "ent": {
       "template": "src/shared/templates/entities",
       "generate": "src/entities/"
     },
-    "entities-ui": {
+    "ent-ui": {
       "template": "src/shared/templates/comp",
       "generate": "src/entities/*/ui/"
     },
-    "entities-api": {
+    "ent-api": {
       "template": "src/shared/templates/api",
       "generate": "src/entities/*/api"
     },
-    "feature-api": {
+    "feat-api": {
       "template": "src/shared/templates/api",
       "generate": "src/features/*/api"
     },
-    "feature": {
+    "feat": {
       "template": "src/shared/templates/feature",
       "generate": "src/features/"
     },
-    "feature-ui": {
+    "feat-ui": {
       "template": "src/shared/templates/comp",
       "generate": "src/features/*/ui/"
     }

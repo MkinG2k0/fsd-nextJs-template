@@ -1,3 +1,6 @@
-export * from './get'
-export * from './slice'
-export * from './model'
+import { slice } from './slice'
+import { GetTodo } from './get'
+
+export const { reducer: todo } = slice
+
+export const TodoSlice = { ...slice.actions, ...GetTodo }

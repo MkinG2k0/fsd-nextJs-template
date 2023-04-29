@@ -1,3 +1,0 @@
-interface authModel {
-	data: any
-}

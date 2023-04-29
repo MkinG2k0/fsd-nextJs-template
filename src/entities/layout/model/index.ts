@@ -1,2 +1,6 @@
-export * from './get'
-export * from './slice'
+import { slice } from './slice'
+import { GetLayout } from './get'
+
+export const { reducer: layout } = slice
+
+export const LayoutSlice = { ...slice.actions, ...GetLayout }

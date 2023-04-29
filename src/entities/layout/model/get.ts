@@ -1,3 +1,5 @@
 import { useStore } from 'shared/hook/Redux'
 
-export const GetLayout = () => useStore((state) => state['layout'])
+const useGet = () => useStore((state) => state['layout'])
+
+export const GetLayout = { useGet }

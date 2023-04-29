@@ -13,5 +13,7 @@ declare namespace Res_Auth {
 		token: string
 	}
 
-	interface Refresh {}
+	interface Refresh {
+		token: string
+	}
 }

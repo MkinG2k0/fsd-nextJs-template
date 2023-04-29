@@ -1,4 +1,4 @@
-import { TodoModel } from 'features/todo/model/model'
+import { TodoModel } from './model'
 
 export const initialState: TodoModel = {
 	todos: {},

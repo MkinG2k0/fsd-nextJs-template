@@ -1,5 +1,3 @@
-// import { Card } from 'antd'
-
 export const Todo: FC<Res_Todo.Base> = ({ title, completed }) => {
 	return (
 		<div

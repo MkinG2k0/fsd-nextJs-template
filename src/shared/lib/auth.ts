@@ -1,4 +1,4 @@
-import { TOKEN } from 'shared/constant/Auth'
+import { TOKEN } from 'shared/constant/auth'
 
 export function getToken() {
 	return localStorage?.getItem(TOKEN)

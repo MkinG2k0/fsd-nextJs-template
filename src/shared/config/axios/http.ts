@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-import { AUTH_STATUS } from 'shared/constant/Auth'
 import { setToken } from 'shared/lib/auth'
+import { AUTH_STATUS } from 'shared/constant/auth'
 
 export const http = axios.create({
 	baseURL: process.env.NEXT_PUBLIC_URL_ENDPOINT,

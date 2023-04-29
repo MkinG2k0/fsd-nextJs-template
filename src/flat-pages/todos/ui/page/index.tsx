@@ -1,8 +1,8 @@
-import { GetTodo, TodoList } from 'features/todo'
+import { TodoSlice, TodoList } from 'features/todo'
 import { AddTodo } from 'features/todo/ui/add-todo/add-todo'
 
 export const Todos: FC = ({}) => {
-	const { todos } = GetTodo()
+	const { todos } = TodoSlice.useGet()
 
 	return (
 		<div className={'col '}>

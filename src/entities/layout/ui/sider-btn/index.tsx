@@ -3,15 +3,15 @@ import { Button } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
 
 import { store } from 'core/store'
-import { GetLayout, setSideCollapsed } from 'entities/layout'
+import { LayoutSlice } from 'entities/layout'
 
 interface sideBtnProps {}
 
 export const SiderBtn: FC<sideBtnProps> = ({}) => {
-	const { sideCollapsed } = GetLayout()
+	const { sideCollapsed } = LayoutSlice.useGet()
 
 	const onCollapse = () => {
-		store.dispatch(setSideCollapsed())
+		store.dispatch(LayoutSlice.setSideCollapsed())
 	}
 
 	return (

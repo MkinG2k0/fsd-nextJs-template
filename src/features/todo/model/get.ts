@@ -1,3 +1,7 @@
 import { useStore } from 'shared/hook/Redux'
 
-export const GetTodo = () => useStore((state) => state['todo'])
+const useGet = () => useStore((state) => state['todo'])
+
+export const GetTodo = {
+	useGet,
+}
