@@ -19,7 +19,8 @@
       "node"
     ],
     "paths": {
-      "entities/*":["entities/*"]
+//      "entities/*":["entities/*"],
+//      "@shared":["shared"],
     },
     "lib": [
       "dom",
@@ -34,11 +35,9 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "pages",
     ".next/types/**/*.ts",
-    "templates/**/*"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
   ]
 }

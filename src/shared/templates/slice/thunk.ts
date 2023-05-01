@@ -1,12 +1,14 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
+import { http } from 'shared'
 
-export const fetchFileNameAll = createAsyncThunk<any, undefined>(
+const fetchFileName = createAsyncThunk<any, undefined>(
 	'FileName/getAll',
 	async () => {
-		return 'FileName'
-	}
+		const data = await http.get('')
+		return data.data
+	},
 )
 
-export const fetch = {
-	fetchFileNameAll,
+export const FileNameFetch = {
+	fetchFileName,
 }

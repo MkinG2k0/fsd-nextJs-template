@@ -1,8 +1,8 @@
-import { FC } from 'react'
-import { Button } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
+import { Button } from '@mui/material'
+import { FC } from 'react'
 
-import { store } from 'core'
+import { dispatch } from 'core'
 import { LayoutSlice } from 'entities/layout'
 
 interface sideBtnProps {}
@@ -11,7 +11,7 @@ export const SiderBtn: FC<sideBtnProps> = ({}) => {
 	const { sideCollapsed } = LayoutSlice.useGet()
 
 	const onCollapse = () => {
-		store.dispatch(LayoutSlice.setSideCollapsed())
+		dispatch(LayoutSlice.setSideCollapsed())
 	}
 
 	return (

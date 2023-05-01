@@ -1,8 +1,9 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/dist/query/react'
+import { getEnvVar } from 'shared/lib'
 
-export const api = createApi({
+export const rtqApi = createApi({
 	baseQuery: fetchBaseQuery({
-		baseUrl: process.env.NEXT_PUBLIC_URL_ENDPOINT,
+		baseUrl: getEnvVar('NEXT_PUBLIC_URL_ENDPOINT'),
 		prepareHeaders: (headers, { getState, endpoint }) => {
 			// const user = (getState() as RootState).Auth?.login.data
 			//

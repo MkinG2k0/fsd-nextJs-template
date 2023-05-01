@@ -1,7 +1,11 @@
-import { slice } from './slice'
 import { FileNameHooks } from './get-hook'
-import { fetch } from './thunk'
+import { FileNameActions } from './slice'
+import { FileNameFetch } from './thunk'
 
-export const { reducer: auth } = slice
+export const FileNameSlice = {
+	...FileNameActions,
+	...FileNameHooks,
+	...FileNameFetch,
+}
 
-export const FileNameSlice = { ...slice.actions, ...FileNameHooks, ...fetch }
+export { FileName } from './slice'

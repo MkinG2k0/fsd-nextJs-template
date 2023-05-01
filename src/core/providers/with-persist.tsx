@@ -1,7 +1,7 @@
 import { PersistGate } from 'redux-persist/integration/react'
 
+import { persist } from '../store/config'
 import { useClient } from 'shared'
-import { persist } from 'core'
 
 export const WithPersist = (component: FC) => (props) => {
 	// eslint-disable-next-line react-hooks/rules-of-hooks

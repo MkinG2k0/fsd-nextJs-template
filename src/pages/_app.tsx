@@ -8,7 +8,6 @@ import '@fontsource/roboto/700.css'
 import Head from 'next/head'
 
 import type { AppProps } from 'next/app'
-
 import { withProviders } from 'core'
 
 export default function App({ Component, pageProps }: AppProps) {

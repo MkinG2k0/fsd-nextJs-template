@@ -4,6 +4,10 @@
       "template": "src/shared/templates/comp",
       "generate": "src/shared/ui/"
     },
+    "slice": {
+      "template": "src/shared/templates/slice",
+      "generate": "src/*/"
+    },
     "page-ssr": {
       "template": "src/shared/templates/ssr-page",
       "generate": "src/pages/*/"

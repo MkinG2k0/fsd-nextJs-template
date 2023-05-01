@@ -1,6 +1,6 @@
 import { GetServerSidePropsContext } from 'next'
 
-import { wrapper } from 'core'
+import { nextReduxWrapper } from 'core'
 import { headerProps } from 'shared'
 
 type propCall = (
@@ -10,7 +10,7 @@ type propCall = (
 
 export const ReduxSSP = (func: propCall) => {
 	return (ctx) =>
-		wrapper.getServerSideProps((store) => async () => {
+		nextReduxWrapper.getServerSideProps((store) => async () => {
 			const resultFunc = func(store, ctx)
 			const promise = resultFunc.promise || []
 			const props = resultFunc.props || {}

@@ -1,4 +1,4 @@
 export * from './store'
 export * from './config'
 export * from './dispatch'
-export * from './wrapper'
+export * from 'core/store/nextReduxWrapper'
