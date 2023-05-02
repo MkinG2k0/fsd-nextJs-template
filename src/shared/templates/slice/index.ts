@@ -9,3 +9,4 @@ export const FileNameSlice = {
 }
 
 export { FileName } from './slice'
+export * from './types'

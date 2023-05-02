@@ -1,12 +1,14 @@
 import { ActionReducerMapBuilder } from '@reduxjs/toolkit'
 
 import { FileNameFetch } from './thunk'
-import { TFileName } from './types'
-import { setStatus, hydrate } from 'shared/lib/redux'
+import { FileNameModel } from './types'
+import { setStatus } from 'shared/lib/redux/set-status'
 
 const { fetchFileName } = FileNameFetch
 
-export const extraReducers = (builder: ActionReducerMapBuilder<TFileName>) => {
+export const extraReducers = (
+	builder: ActionReducerMapBuilder<FileNameModel>,
+) => {
 	builder
 		.addCase(fetchFileName.pending, (state, action) => {
 			setStatus(state.data, action)
@@ -20,10 +22,4 @@ export const extraReducers = (builder: ActionReducerMapBuilder<TFileName>) => {
 
 			state.data = payload
 		})
-
-	builder.addCase(hydrate, (state, { payload }) => {
-		if (payload) {
-			// logic
-		}
-	})
 }

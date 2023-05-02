@@ -1,7 +1,7 @@
 import MenuIcon from '@mui/icons-material/Menu'
 import { Button } from '@mui/material'
-import { FC } from 'react'
 
+import { FC } from 'react'
 import { dispatch } from 'core'
 import { LayoutSlice } from 'entities/layout'
 
@@ -22,7 +22,7 @@ export const SiderBtn: FC<sideBtnProps> = ({}) => {
 		>
 			<Button onClick={onCollapse} className={'align-top text-white'}>
 				<MenuIcon />
-				{/*{sideCollapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}*/}
+				{/* {sideCollapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}*/}
 			</Button>
 		</div>
 	)

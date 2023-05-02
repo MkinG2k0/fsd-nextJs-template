@@ -1,7 +1,6 @@
+import { usePathname } from 'next/navigation'
 import { useRouter } from 'next/router'
 import { FC } from 'react'
-import { usePathname } from 'next/navigation'
-
 import { LayoutSlice } from 'entities/layout'
 
 // import { MenuItems } from 'entities/layout/config/menu'
@@ -23,17 +22,16 @@ export const Sider: FC<SiderProps> = ({}) => {
 			// collapsedWidth={width}
 			// collapsed={sideCollapsed}
 		>
-			{/*<Menu*/}
+			{/* <Menu*/}
 			{/*	theme={'dark'}*/}
 			{/*	mode={'vertical'}*/}
 			{/*	items={MenuItems}*/}
 			{/*	selectedKeys={[path!]}*/}
 			{/*	onClick={onClickMenu}*/}
-			{/*/>*/}
+			{/* />*/}
 		</div>
 	)
 }
-
 
 export const SiderLoad: FC = () => {
 	return <div className={'bg-gray-900 w-20'}></div>

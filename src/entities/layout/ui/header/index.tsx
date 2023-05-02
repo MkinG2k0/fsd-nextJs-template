@@ -15,14 +15,14 @@ export const Header: FC<HeaderProps> = ({}) => {
 	return (
 		<div className={'flex bg-gray-700 h-12'}>
 			<SiderBtn />
-			{/*<Menu*/}
+			{/* <Menu*/}
 			{/*	className={'bg-gray-700 w-full flex'}*/}
 			{/*	theme={'dark'}*/}
 			{/*	selectedKeys={[path!]}*/}
 			{/*	mode={'horizontal'}*/}
 			{/*	items={MenuItems}*/}
 			{/*	onClick={onClickMenu}*/}
-			{/*/>*/}
+			{/* />*/}
 		</div>
 	)
 }
@@ -35,7 +35,7 @@ export const HeaderLoad = () => {
 					'bg-gray-800 flex items-center justify-center w-20 flex-grow-0 flex-shrink-0'
 				}
 			></div>
-			{/*<Skeleton />*/}
+			{/* <Skeleton />*/}
 		</div>
 	)
 }

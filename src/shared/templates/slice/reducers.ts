@@ -1,9 +1,9 @@
 import { PayloadAction } from '@reduxjs/toolkit'
 
-import { TFileName } from './types'
+import { FileNameModel } from './types'
 
 export const reducers = {
-	setFileName(state: TFileName, { payload }: PayloadAction<string>) {
+	setFileName(state: FileNameModel, { payload }: PayloadAction<string>) {
 		state.data.data = payload
 	},
 }

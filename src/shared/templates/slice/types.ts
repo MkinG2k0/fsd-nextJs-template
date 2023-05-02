@@ -1,3 +1,3 @@
-export interface TFileName {
+export interface FileNameModel {
 	data: IStatus<any>
 }

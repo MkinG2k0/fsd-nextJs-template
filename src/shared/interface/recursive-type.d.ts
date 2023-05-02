@@ -6,5 +6,3 @@ type ReplaceData<T, Replace> = {
 
 export type ReplacePromise<T> = ReplaceData<T, Promise<any>>
 export type ReplaceBoolean<T> = ReplaceData<T, boolean>
-
-

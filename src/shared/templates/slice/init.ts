@@ -1,5 +1,5 @@
-import { TFileName } from './types'
+import { FileNameModel } from './types'
 
-export const initialState: TFileName = {
+export const initialState: FileNameModel = {
 	data: {},
 }
