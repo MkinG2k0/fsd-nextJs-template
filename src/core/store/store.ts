@@ -8,9 +8,7 @@ import { rtqApi } from 'core/store/config/rtq-api'
 export const store = configureStore({
 	reducer: persistedReducer,
 	middleware: (getDefaultMiddleware) =>
-		getDefaultMiddleware(serializable)
-			.concat(rtqApi.middleware)
-			.concat(rtkQueryAuthMiddleware),
+		getDefaultMiddleware(serializable).concat(rtqApi.middleware).concat(rtkQueryAuthMiddleware),
 })
 
 setupListeners(store.dispatch)

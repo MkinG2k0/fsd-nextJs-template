@@ -6,9 +6,7 @@ import { setStatus } from 'shared/lib/redux/set-status'
 
 const { fetchFileName } = FileNameFetch
 
-export const extraReducers = (
-	builder: ActionReducerMapBuilder<FileNameModel>,
-) => {
+export const extraReducers = (builder: ActionReducerMapBuilder<FileNameModel>) => {
 	builder
 		.addCase(fetchFileName.pending, (state, action) => {
 			setStatus(state.data, action)

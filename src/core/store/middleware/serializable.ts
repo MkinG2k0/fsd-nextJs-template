@@ -1,11 +1,4 @@
-import {
-	FLUSH,
-	PAUSE,
-	PERSIST,
-	PURGE,
-	REGISTER,
-	REHYDRATE,
-} from 'redux-persist'
+import { FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE } from 'redux-persist'
 
 export const serializable = {
 	serializableCheck: {

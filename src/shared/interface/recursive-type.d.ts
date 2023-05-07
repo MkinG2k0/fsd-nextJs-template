@@ -1,7 +1,5 @@
 type ReplaceData<T, Replace> = {
-	[P in keyof T]: T[P] extends object
-		? Replace | ReplaceData<T[P], Replace>
-		: Replace
+	[P in keyof T]: T[P] extends object ? Replace | ReplaceData<T[P], Replace> : Replace
 }
 
 export type ReplacePromise<T> = ReplaceData<T, Promise<any>>

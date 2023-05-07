@@ -1,22 +1,12 @@
-import { signIn, signOut, useSession } from 'next-auth/react'
 import { FC } from 'react'
+import { useAuth } from 'entities/auth/hook'
 
 interface authProps {}
 
 export const Auth: FC<authProps> = ({}) => {
-	const { data: session } = useSession()
-	if (session) {
-		return (
-			<>
-				Signed in as {session?.user?.email} <br />
-				<button onClick={() => signOut()}>Sign out</button>
-			</>
-		)
+	const { isAuth } = useAuth()
+	if (isAuth) {
+		return <>isAuth</>
 	}
-	return (
-		<>
-			Not signed in <br />
-			<button onClick={() => signIn()}>Sign in</button>
-		</>
-	)
+	return <>not isAuth</>
 }

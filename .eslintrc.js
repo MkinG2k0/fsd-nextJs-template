@@ -25,6 +25,9 @@ module.exports = {
 		'plugin:@typescript-eslint/recommended',
 		'plugin:react-hooks/recommended',
 		'plugin:import/typescript',
+//
+// 		'@feature-sliced/eslint-config/rules/import-order',
+		'@feature-sliced/eslint-config/rules/layers-slices',
 		//
 		// 'plugin:prettier/recommended',
 		// test
@@ -35,6 +38,7 @@ module.exports = {
 
 	plugins: ['react', '@typescript-eslint', 'jsx-a11y', 'promise', 'prettier'],
 	rules: {
+
 		indent: [
 			// отступы
 			'off', // варн в файлах rtqApi
@@ -44,9 +48,9 @@ module.exports = {
 				VariableDeclarator: 'first',
 				MemberExpression: 1,
 				outerIIFEBody: 1,
-				FunctionDeclaration: { parameters: 'first' },
-				StaticBlock: { body: 1 },
-				CallExpression: { arguments: 1 },
+				FunctionDeclaration: {parameters: 'first'},
+				StaticBlock: {body: 1},
+				CallExpression: {arguments: 1},
 				ArrayExpression: 1,
 				ObjectExpression: 1,
 				ImportDeclaration: 1,
@@ -65,6 +69,9 @@ module.exports = {
 		'react/display-name': [0], // разрешаем компонетну возращать калбэк , пример "/src/core/providers/*"
 		'no-mixed-spaces-and-tabs': [0], // смешивание табов и пробелов , временно
 		// WARN
+		'react/jsx-curly-brace-presence': [1, {props: 'always', propElementValues: 'always'}], // фигурные скобки в jsx
+		// 'jsx-quotes': [1, 'prefer-single'], // TODO Err prettier
+		'max-len': [1, {code: 100, tabWidth: 2, comments: 120}], // Принудительно установите максимальную длину строки
 		'prettier/prettier': [1], // отсупы
 		'@typescript-eslint/no-empty-function': [1], // пустые функции
 		'import/order': [1], // сорировка импортов
@@ -85,13 +92,14 @@ module.exports = {
 		'prefer-const': [1], // Требовать const объявления для переменных, которые никогда не переназначаются после объявления
 		'prefer-template': [1], // Требовать шаблонные литералы вместо конкатенации строк
 		'space-in-parens': [1, 'never'], // Обеспечить согласованный интервал внутри круглых скобок
+		'space-before-blocks': [1, 'always'], // Обеспечить согласованный интервал перед блоками
 		// ERROR
 		'no-param-reassign': [2], // TODO?  запретить переопределение аргуменов функции
 		'no-implied-eval': [2], // запретить непреднамеренный eval "setTimeout("alert('Hi!');", 100)"
 		eqeqeq: [2], // только 3ое равенство "true === true"
 		'no-multi-assign': [2], // запретить множественное присвоение "const foo = bar = 0"
 		'default-param-last': [2], // дефолтные парметры функции пишутся в конце
-		'max-lines': [2, { max: 100, skipBlankLines: true }], // максимальная длина строк в файле
+		'max-lines': [2, {max: 100, skipBlankLines: true}], // максимальная длина строк в файле
 		// 'import/order': [
 		// 	'warn', // сортировка иипортов
 		// 	{
