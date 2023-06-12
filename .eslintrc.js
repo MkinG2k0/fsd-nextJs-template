@@ -79,7 +79,6 @@ module.exports = {
 		'comma-dangle': [1, 'always-multiline'], // последняя запятая в массивах ...
 		camelcase: [1], // переменные пишутся в стиле camelCase
 		curly: [1, 'all'], // запретить if в одну строку
-		'dot-notation': [1], // если возможно то читать свойство обьекта через точку "obj.name"
 		'new-cap': [1], // конструктор класс с большой буквы
 		'no-console': [1], // без консоли "console.log"
 		'no-empty': [1], // пустые функции
