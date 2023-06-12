@@ -8,7 +8,7 @@ interface MainProps {}
 export const Main: FC<MainProps> = ({}) => {
 	return (
 		<div className={style.wrap}>
-			<Button variant="contained">Hello World</Button>
+			<Button variant={'contained'}>Hello World</Button>
 		</div>
 	)
 }

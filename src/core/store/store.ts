@@ -3,6 +3,7 @@ import { setupListeners } from '@reduxjs/toolkit/query'
 
 import { persistedReducer } from './config/persist-reducer'
 import { rtkQueryAuthMiddleware, serializable } from './middleware'
+
 import { rtqApi } from 'core/store/config/rtq-api'
 
 export const store = configureStore({

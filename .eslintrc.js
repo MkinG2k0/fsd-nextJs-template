@@ -74,7 +74,7 @@ module.exports = {
 		'max-len': [1, {code: 100, tabWidth: 2, comments: 120}], // Принудительно установите максимальную длину строки
 		'prettier/prettier': [1], // отсупы
 		'@typescript-eslint/no-empty-function': [1], // пустые функции
-		'import/order': [1], // сорировка импортов
+		// 'import/order': [1], // сорировка импортов
 		'no-unused-vars': [1], // не используемые переменные
 		'comma-dangle': [1, 'always-multiline'], // последняя запятая в массивах ...
 		camelcase: [1], // переменные пишутся в стиле camelCase
@@ -100,31 +100,31 @@ module.exports = {
 		'no-multi-assign': [2], // запретить множественное присвоение "const foo = bar = 0"
 		'default-param-last': [2], // дефолтные парметры функции пишутся в конце
 		'max-lines': [2, {max: 100, skipBlankLines: true}], // максимальная длина строк в файле
-		// 'import/order': [
-		// 	'warn', // сортировка иипортов
-		// 	{
-		// 		'newlines-between': 'always',
-		// 		groups: [
-		// 			'external',
-		// 			'parent',
-		// 			'sibling',
-		// 			'index',
-		// 			'object',
-		// 			'type',
-		// 			'builtin',
-		// 		],
-		// 		pathGroups: [
-		// 			{
-		// 				pattern: '@/**/**',
-		// 				group: 'parent',
-		// 				position: 'before',
-		// 			},
-		// 			{
-		// 				pattern: './**',
-		// 				group: 'builtin',
-		// 			},
-		// 		],
-		// 	},
-		// ],
+		'import/order': [
+			'warn', // сортировка импортов
+			{
+				'newlines-between': 'always',
+				groups: [
+					'external',
+					'parent',
+					'sibling',
+					'index',
+					'object',
+					'type',
+					'builtin',
+				],
+				pathGroups: [
+					{
+						pattern: '@/**/**',
+						group: 'parent',
+						position: 'before',
+					},
+					{
+						pattern: './**',
+						group: 'builtin',
+					},
+				],
+			},
+		],
 	},
 }

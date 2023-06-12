@@ -1,4 +1,5 @@
 import { FC } from 'react'
+
 import { useAuth } from 'entities/auth/hook'
 
 interface authProps {}

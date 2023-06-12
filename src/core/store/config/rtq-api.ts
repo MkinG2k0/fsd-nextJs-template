@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/dist/query/react'
+
 import { getEnvVar } from 'shared/lib'
 
 export const rtqApi = createApi({

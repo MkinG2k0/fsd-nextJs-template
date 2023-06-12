@@ -1,6 +1,7 @@
 import { usePathname } from 'next/navigation'
 import { useRouter } from 'next/router'
 import { FC } from 'react'
+
 import { LayoutSlice } from 'entities/layout'
 
 // import { MenuItems } from 'entities/layout/config/menu'

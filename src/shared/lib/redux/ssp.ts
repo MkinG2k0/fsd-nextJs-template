@@ -5,10 +5,10 @@ import { headerProps } from 'shared'
 
 type propCall = (
 	store: AppStore,
-	ctx: GetServerSidePropsContext,
+	ctx: GetServerSidePropsContext
 ) => { props?: object; promise: Promise<any>[] }
 
-export const ReduxSSP = (func: propCall) => {
+export const reduxSSP = (func: propCall) => {
 	return (ctx) =>
 		nextReduxWrapper.getServerSideProps((store) => async () => {
 			const resultFunc = func(store, ctx)

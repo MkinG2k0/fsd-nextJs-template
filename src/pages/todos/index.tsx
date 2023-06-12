@@ -1,9 +1,9 @@
 import { GetServerSideProps } from 'next'
 
 import { Todos } from 'flat-pages/todos'
-import { ReduxSSP } from 'shared/lib/redux'
+import { reduxSSP } from 'shared/lib/redux'
 
-export const getServerSideProps: GetServerSideProps = ReduxSSP((store) => ({
+export const getServerSideProps: GetServerSideProps = reduxSSP((store) => ({
 	promise: [],
 }))
 

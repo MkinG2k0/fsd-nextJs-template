@@ -1,6 +1,7 @@
 import MenuIcon from '@mui/icons-material/Menu'
 import { Button } from '@mui/material'
 import { FC } from 'react'
+
 import { dispatch } from 'core'
 import { LayoutSlice } from 'entities/layout/model'
 
