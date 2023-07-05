@@ -1,12 +1,14 @@
 'use client'
-import style from './main.module.scss'
-
 import { FC } from 'react'
+
+import { Button } from '@mui/material'
 
 interface MainProps {}
 
 export const Main: FC<MainProps> = ({}) => {
 	return (
-		<div className={style.wrap}>фыв{/*<Button variant={'contained'}>Hello World</Button>*/}</div>
+		<div className={'p-2'}>
+			<Button variant={'contained'}>Hello World</Button>
+		</div>
 	)
 }

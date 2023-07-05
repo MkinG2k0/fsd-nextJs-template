@@ -1,8 +1,8 @@
+import { Main } from 'flat-pages/main'
 import { NextPage } from 'next'
 
 const Page: NextPage = () => {
-	return <div>asdasd</div>
-	// return <Main />
+	return <Main />
 }
 
 export default Page

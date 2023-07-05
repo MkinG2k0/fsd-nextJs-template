@@ -1,8 +1,0 @@
-@use "colors";
-@use "variable";
-
-:export {
-	base: colors.$color-base;
-	second: colors.$color-second;
-	triple: colors.$color-triple;
-}
