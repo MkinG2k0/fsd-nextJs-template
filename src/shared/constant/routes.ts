@@ -1,9 +1,9 @@
 export const ExampleRoute = {
 	base: 'examplePath',
-	delete: 'examplePath',
-	patch: 'examplePath',
-	getById: 'examplePath/',
 	create: 'examplePath/create/',
+	delete: 'examplePath',
+	getById: 'examplePath/',
+	patch: 'examplePath',
 	update: 'examplePath/',
 }
 
@@ -12,6 +12,6 @@ export const TodoRoute = {
 }
 
 export const AuthRoute = {
-	refresh: 'auth/refresh',
 	base: 'auth',
+	refresh: 'auth/refresh',
 }

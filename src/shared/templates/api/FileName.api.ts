@@ -1,21 +1,38 @@
-import { rtqApi } from 'core/store/config/rtq-api'
 import { ExampleRoute } from 'shared'
+
+import { rtqApi } from 'core/store/config/rtq-api'
 
 const FileName = rtqApi.injectEndpoints({
 	endpoints: (builder) => ({
+		// POST: Create
+		createFileName: builder.mutation<AxiosReqWrap<any>, Omit<any, 'id'>>({
+			invalidatesTags: [{ id: 'FileName-LIST', type: 'FileName' }],
+			query: (body) => ({
+				body,
+				method: 'POST',
+				url: ExampleRoute.create,
+			}),
+		}),
+		// DELETE: Delete by id
+		deleteFileNameById: builder.mutation<AxiosReqWrap<any>, TID>({
+			query: (id) => ({
+				method: 'DELETE',
+				url: ExampleRoute.delete.concat(String(id)),
+			}),
+		}),
 		// GET: Get all
 		getFileName: builder.query<ReqWrap<any>, void>({
-			query: () => ExampleRoute.base,
 			providesTags: (result) =>
 				result
 					? [
 							...result.data.map(({ id }) => ({
-								type: 'FileName' as const,
 								id,
+								type: 'FileName' as const,
 							})),
-							{ type: 'FileName', id: 'FileName-LIST' },
+							{ id: 'FileName-LIST', type: 'FileName' },
 					  ]
-					: [{ type: 'FileName', id: 'FileName-LIST' }],
+					: [{ id: 'FileName-LIST', type: 'FileName' }],
+			query: () => ExampleRoute.base,
 		}),
 		// GET: Get by id
 		getFileNameById: builder.query<AxiosReqWrap<any>, TID>({
@@ -23,37 +40,21 @@ const FileName = rtqApi.injectEndpoints({
 		}),
 		// PUT: Update by id
 		updateFileName: builder.mutation<AxiosReqWrap<any>, Omit<any, 'id'>>({
+			invalidatesTags: [{ id: 'FileName-LIST', type: 'FileName' }],
 			query: (body) => ({
-				url: ExampleRoute.create,
+				body,
 				method: 'PUT',
-				body,
-			}),
-			invalidatesTags: [{ type: 'FileName', id: 'FileName-LIST' }],
-		}),
-		// DELETE: Delete by id
-		deleteFileNameById: builder.mutation<AxiosReqWrap<any>, TID>({
-			query: (id) => ({
-				url: ExampleRoute.delete.concat(String(id)),
-				method: 'DELETE',
-			}),
-		}),
-		// POST: Create
-		createFileName: builder.mutation<AxiosReqWrap<any>, Omit<any, 'id'>>({
-			query: (body) => ({
 				url: ExampleRoute.create,
-				method: 'POST',
-				body,
 			}),
-			invalidatesTags: [{ type: 'FileName', id: 'FileName-LIST' }],
 		}),
 	}),
 	overrideExisting: false,
 })
 
 export const {
-	useGetFileNameQuery,
-	useGetFileNameByIdQuery,
 	useCreateFileNameMutation,
 	useDeleteFileNameByIdMutation,
+	useGetFileNameByIdQuery,
+	useGetFileNameQuery,
 	useUpdateFileNameMutation,
 } = FileName

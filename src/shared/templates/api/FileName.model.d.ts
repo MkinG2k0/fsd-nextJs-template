@@ -1,6 +1,6 @@
 declare namespace Q_FileName {
 	interface Data {
-		id: string | number
+		id: number | string
 	}
 }
 

@@ -1,10 +1,10 @@
+import { reducers } from './reducers'
+import { initialState } from './init'
+
 import { createSlice } from '@reduxjs/toolkit'
 
-import { initialState } from './init'
-import { reducers } from './reducers'
-
 export const slice = createSlice({
-	name: 'layout',
 	initialState,
+	name: 'layout',
 	reducers,
 })

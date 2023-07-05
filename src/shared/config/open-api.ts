@@ -3,16 +3,16 @@ import type { ConfigFile } from '@rtk-query/codegen-openapi'
 import { generateFilesApi } from 'shared'
 
 const config: ConfigFile = {
-	schemaFile: 'http://link/swagger-json',
 	apiFile: 'app/store/config/api.ts',
 	apiImport: 'rtqApi',
-	outputFile: '../generated/genApi.ts',
-	exportName: 'genApi',
 	argSuffix: '_arg',
-	responseSuffix: '_res',
+	exportName: 'genApi',
 	hooks: true,
-	tag: true,
+	outputFile: '../generated/genApi.ts',
 	outputFiles: generateFilesApi('../generated/api/', 'Tag-name'),
+	responseSuffix: '_res',
+	schemaFile: 'http://link/swagger-json',
+	tag: true,
 }
 
 export default config

@@ -1,11 +1,11 @@
+import { reducers } from './reducers'
+import { initialState } from './init'
+
 import { createSlice } from '@reduxjs/toolkit'
 
-import { initialState } from './init'
-import { reducers } from './reducers'
-
 const Index = createSlice({
-	name: 'auth',
 	initialState,
+	name: 'auth',
 	reducers,
 })
 

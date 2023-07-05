@@ -1,6 +1,6 @@
 export const rule = (name: string) => ({
-	required: true,
 	message: `Поле "${name}" обязательно`,
+	required: true,
 })
 
 export const formData = (data?: Record<string, any>) =>

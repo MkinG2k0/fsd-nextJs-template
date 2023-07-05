@@ -4,11 +4,11 @@ import { ReactNode } from 'react'
 import { cn } from 'shared/lib/cn'
 
 interface BlockProps {
-	heading: ReactNode
 	className?: string
+	heading: ReactNode
 }
 
-export const WrapCard: FC<BlockProps> = ({ heading, children, className }) => {
+export const WrapCard: FC<BlockProps> = ({ children, className, heading }) => {
 	const cnCard = cn('w100', className)
 
 	return (

@@ -1,14 +1,14 @@
 import style from './style.module.scss'
 
 interface SkeletonProps {
-	width?: string | number
-	height?: string | number
+	height?: number | string
+	width?: number | string
 }
 
-export const Skeleton: FC<SkeletonProps> = ({ width, height }) => {
-	return <div className={style.wrap} style={{ width, height }}></div>
+export const Skeleton: FC<SkeletonProps> = ({ height, width }) => {
+	return <div className={style.wrap} style={{ height, width }}></div>
 }
 Skeleton.defaultProps = {
-	width: '100%',
 	height: '100%',
+	width: '100%',
 }

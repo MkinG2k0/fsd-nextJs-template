@@ -1,6 +1,6 @@
-type TStatus = 'idle' | 'pending' | 'fulfilled' | 'rejected'
+type TStatus = 'fulfilled' | 'idle' | 'pending' | 'rejected'
 type TStatusReq = 'error' | 'success'
-type TError = string | undefined | null
+type TError = null | string | undefined
 
 interface ISet<T> {
 	name: T
@@ -8,15 +8,15 @@ interface ISet<T> {
 }
 
 interface ReqWrap<T> {
-	status?: HttpStatus
-	message?: string
 	data: T
+	message?: string
+	status?: number
 }
 
 interface IStatus<T> {
-	status?: TStatus
-	error?: TError
 	data?: T
+	error?: TError
+	status?: TStatus
 }
 
 type TID = number | string

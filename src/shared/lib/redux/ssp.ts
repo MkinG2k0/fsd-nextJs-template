@@ -1,12 +1,12 @@
-import { GetServerSidePropsContext } from 'next'
-
-import { nextReduxWrapper } from 'core'
 import { headerProps } from 'shared'
+
+import { GetServerSidePropsContext } from 'next'
+import { nextReduxWrapper } from 'core'
 
 type propCall = (
 	store: AppStore,
 	ctx: GetServerSidePropsContext
-) => { props?: object; promise: Promise<any>[] }
+) => { promise: Promise<any>[]; props?: object }
 
 export const reduxSSP = (func: propCall) => {
 	return (ctx) =>

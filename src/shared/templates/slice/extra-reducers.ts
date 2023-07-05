@@ -1,9 +1,9 @@
-import { ActionReducerMapBuilder } from '@reduxjs/toolkit'
-
-import { FileNameFetch } from './thunk'
 import { FileNameModel } from './types'
+import { FileNameFetch } from './thunk'
 
 import { setStatus } from 'shared/lib/redux/set-status'
+
+import { ActionReducerMapBuilder } from '@reduxjs/toolkit'
 
 const { fetchFileName } = FileNameFetch
 

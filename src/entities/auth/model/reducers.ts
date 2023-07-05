@@ -1,8 +1,8 @@
-import { PayloadAction } from '@reduxjs/toolkit'
-
 import { authModel } from './types'
 
 import { TokenService } from 'shared'
+
+import { PayloadAction } from '@reduxjs/toolkit'
 
 export const reducers = {
 	removeToken(state: authModel) {

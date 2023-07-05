@@ -1,12 +1,12 @@
-import { combineReducers } from '@reduxjs/toolkit'
-
 import { rtqApi } from './rtq-api'
 
-import { auth } from 'entities/auth'
 import { layout } from 'entities/layout'
+import { auth } from 'entities/auth'
+
+import { combineReducers } from '@reduxjs/toolkit'
 
 export const rootReducer = combineReducers({
-	[rtqApi.reducerPath]: rtqApi.reducer,
 	auth,
 	layout,
+	[rtqApi.reducerPath]: rtqApi.reducer,
 })

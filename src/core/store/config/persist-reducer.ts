@@ -1,7 +1,7 @@
-import { persistReducer } from 'redux-persist'
-
 import { rootReducer } from './root-reducer'
 import { storage } from './storage'
+
+import { persistReducer } from 'redux-persist'
 
 export const persistedReducer = persistReducer(
 	{
@@ -9,5 +9,5 @@ export const persistedReducer = persistReducer(
 		storage,
 		// whitelist: [auth.name, layout.name],
 	},
-	rootReducer,
+	rootReducer
 )

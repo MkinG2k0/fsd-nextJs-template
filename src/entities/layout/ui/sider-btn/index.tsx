@@ -1,9 +1,11 @@
-import MenuIcon from '@mui/icons-material/Menu'
-import { Button } from '@mui/material'
+'use client'
 import { FC } from 'react'
 
-import { dispatch } from 'core'
 import { LayoutSlice } from 'entities/layout/model'
+
+import MenuIcon from '@mui/icons-material/Menu'
+import { Button } from '@mui/material'
+import { dispatch } from 'core'
 
 interface sideBtnProps {}
 
@@ -16,7 +18,7 @@ export const SiderBtn: FC<sideBtnProps> = ({}) => {
 
 	return (
 		<div className={'bg-gray-800 flex items-center justify-center w-20 flex-grow-0 flex-shrink-0'}>
-			<Button onClick={onCollapse} className={'align-top text-white'}>
+			<Button className={'align-top text-white'} onClick={onCollapse}>
 				<MenuIcon />
 				{/* {sideCollapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}*/}
 			</Button>

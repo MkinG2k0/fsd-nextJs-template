@@ -1,5 +1,5 @@
-import { slice } from './slice'
 import { GetLayout } from './get'
+import { slice } from './slice'
 
 export const { reducer: layout } = slice
 

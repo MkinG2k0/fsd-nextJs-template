@@ -1,7 +1,12 @@
+import { AuthSlice, RAuth } from 'entities/auth'
+
 import { dispatch } from 'core'
-import { RAuth, AuthSlice } from 'entities/auth'
 
 export const authService = {
+	logOut: () => {
+		dispatch(AuthSlice.removeToken())
+	},
+
 	login: (loginRequest: Req_Auth.Login): Promise<Res_Auth.Login> => {
 		return RAuth.login(loginRequest)
 			.then(({ data }) => {
@@ -30,9 +35,5 @@ export const authService = {
 			.catch(({ response }) => {
 				return response.data
 			})
-	},
-
-	logOut: () => {
-		dispatch(AuthSlice.removeToken())
 	},
 }

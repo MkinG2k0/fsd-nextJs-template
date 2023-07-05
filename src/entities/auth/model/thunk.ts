@@ -1,6 +1,6 @@
-import { createAsyncThunk } from '@reduxjs/toolkit'
-
 import { RAuth } from 'entities/auth'
+
+import { createAsyncThunk } from '@reduxjs/toolkit'
 
 export const fetchLogin = createAsyncThunk<Res_Auth.Login, Req_Auth.Login, { rejectValue: string }>(
 	'fetch/auth/login',
@@ -8,7 +8,7 @@ export const fetchLogin = createAsyncThunk<Res_Auth.Login, Req_Auth.Login, { rej
 		const data = await RAuth.login(login)
 
 		return data.data.data
-	},
+	}
 )
 
 export const fetchRefresh = createAsyncThunk<

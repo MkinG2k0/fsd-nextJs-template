@@ -1,27 +1,46 @@
 {
-	"compilerOptions": {
-		"baseUrl": "src",
-		"target": "ESNext",
-		"module": "esnext",
-		"moduleResolution": "node",
-		"jsx": "preserve",
-		"noImplicitAny": false,
-		"allowJs": true,
-		"skipLibCheck": true,
-		"strict": true,
-		"forceConsistentCasingInFileNames": true,
-		"noEmit": true,
-		"esModuleInterop": true,
-		"resolveJsonModule": true,
-		"isolatedModules": true,
-		"incremental": true,
-		"types": ["node"],
-		"paths": {
-			"entities/*": ["entities/*"]
-		},
-		"lib": ["dom", "dom.iterable", "esnext"],
-		"plugins": []
-	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-	"exclude": ["node_modules"]
+  "compilerOptions": {
+    "baseUrl": "src",
+    "target": "ESNext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "jsx": "preserve",
+    "noImplicitAny": false,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "incremental": true,
+    "types": [
+      "node"
+    ],
+    "paths": {
+      "entities/*": [
+        "entities/*"
+      ]
+    },
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

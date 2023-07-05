@@ -1,7 +1,7 @@
-import { Footer } from '../footer'
-import { Header } from '../header'
-
 import style from './layout.module.scss'
+
+import { Header } from '../header'
+import { Footer } from '../footer'
 
 export const Layout: FC = ({ children }) => {
 	return (

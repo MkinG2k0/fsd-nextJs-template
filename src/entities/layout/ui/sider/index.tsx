@@ -1,8 +1,11 @@
-import { usePathname } from 'next/navigation'
-import { useRouter } from 'next/router'
+'use client'
+
 import { FC } from 'react'
 
 import { LayoutSlice } from 'entities/layout'
+
+import { usePathname } from 'next/navigation'
+import { useRouter } from 'next/router'
 
 // import { MenuItems } from 'entities/layout/config/menu'
 

@@ -1,8 +1,8 @@
-import axios from 'axios'
-
 import { AxiosConfig } from './config'
 
-import { TokenService, AUTH_STATUS } from 'shared'
+import { AUTH_STATUS, TokenService } from 'shared'
+
+import axios from 'axios'
 
 export const http = axios.create(AxiosConfig)
 
@@ -14,7 +14,7 @@ http.interceptors.request.use(
 
 		return config
 	},
-	(error) => Promise.reject(error),
+	(error) => Promise.reject(error)
 )
 
 http.interceptors.response.use(
@@ -27,5 +27,5 @@ http.interceptors.response.use(
 		}
 
 		return Promise.reject(error)
-	},
+	}
 )
