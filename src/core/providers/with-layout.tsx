@@ -1,4 +1,3 @@
-'use client'
 import { Layout } from 'entities/layout/'
 
-export const WithLayout = (component: FC) => (props) => <Layout>{component(props)}</Layout>
+export const WithLayout = (children: PropsWithChildren<any>) => () => <Layout>{children}</Layout>

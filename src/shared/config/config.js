@@ -1,11 +1,10 @@
-module.exports= {
-	templates: {
-		comp: {
-			template: 'src/shared/templates/comp',
-			generate: 'src/shared/ui/',
-		},
-	},
+module.exports = {
 	debug: true,
 	isReplaceNameFolder: true,
+	templates: {
+		comp: {
+			generate: 'src/shared/ui/',
+			template: 'src/shared/templates/comp',
+		},
+	},
 }
-
