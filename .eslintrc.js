@@ -20,10 +20,9 @@ module.exports = {
 
 	extends: [
 		'next',
-		'eslint:recommended',
 		'plugin:react/recommended',
-		'plugin:@typescript-eslint/recommended',
 		'plugin:react-hooks/recommended',
+		'plugin:import/warnings',
 		'plugin:import/typescript',
 		'@feature-sliced/eslint-config/rules/layers-slices',
 		'plugin:perfectionist/recommended-natural',
@@ -102,7 +101,7 @@ module.exports = {
 		// 'import/order': [1], // сорировка импортов
 		'no-unused-vars': [1], // не используемые переменные
 		'comma-dangle': [1, 'always-multiline'], // последняя запятая в массивах ...
-		camelcase: [1], // переменные пишутся в стиле camelCase
+		// camelcase: [1], // переменные пишутся в стиле camelCase
 		curly: [1, 'all'], // запретить if в одну строку
 		'new-cap': [1], // конструктор класс с большой буквы
 		'no-console': [1], // без консоли "console.log"

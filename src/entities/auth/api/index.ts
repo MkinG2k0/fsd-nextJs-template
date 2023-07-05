@@ -1,11 +1,11 @@
-import { http } from 'shared/config/axios'
-import { AuthRoute } from 'shared'
+import { Req_Auth, Res_Auth } from 'entities/auth/api/auth'
 
-const login = (data: Req_Auth.Login): AxiosReqWrap<Res_Auth.Login> =>
-	http.post(AuthRoute.base, data)
+import { http } from 'shared/config/axios'
+
+const login = (data: Req_Auth.Login): AxiosReqWrap<Res_Auth.Login> => http.post('login', data)
 
 const refresh = (data: Req_Auth.Refresh): AxiosReqWrap<Res_Auth.Refresh> =>
-	http.post(AuthRoute.refresh, data)
+	http.post('refresh', data)
 
 export const RAuth = {
 	login,

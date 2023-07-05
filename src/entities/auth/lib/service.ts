@@ -1,3 +1,4 @@
+import { Req_Auth, Res_Auth } from 'entities/auth/api/auth'
 import { RAuth } from 'entities/auth'
 
 export const authService = {

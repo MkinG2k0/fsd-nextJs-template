@@ -1,4 +1,4 @@
-declare namespace Req_Auth {
+export declare namespace Req_Auth {
 	interface Login {
 		email: string
 		password: string
@@ -8,7 +8,7 @@ declare namespace Req_Auth {
 	interface Refresh {}
 }
 
-declare namespace Res_Auth {
+export declare namespace Res_Auth {
 	interface Login {
 		token: string
 	}
