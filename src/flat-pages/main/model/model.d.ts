@@ -1,3 +1,0 @@
-interface mainModel {
-	data: any
-}

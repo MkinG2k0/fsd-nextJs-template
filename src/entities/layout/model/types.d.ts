@@ -1,3 +1,0 @@
-interface ILayout {
-	sideCollapsed: boolean
-}

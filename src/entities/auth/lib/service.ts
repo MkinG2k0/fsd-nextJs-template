@@ -1,16 +1,14 @@
-import { AuthSlice, RAuth } from 'entities/auth'
-
-import { dispatch } from 'core'
+import { RAuth } from 'entities/auth'
 
 export const authService = {
 	logOut: () => {
-		dispatch(AuthSlice.removeToken())
+		// dispatch(AuthSlice.removeToken())
 	},
 
 	login: (loginRequest: Req_Auth.Login): Promise<Res_Auth.Login> => {
 		return RAuth.login(loginRequest)
 			.then(({ data }) => {
-				dispatch(AuthSlice.setToken(data.data.token))
+				// dispatch(AuthSlice.setToken(data.data.token))
 				return data
 			})
 			.catch(({ response }) => {
@@ -24,7 +22,7 @@ export const authService = {
 				const token = data.data.token
 
 				if (token) {
-					dispatch(AuthSlice.setToken(data.data.token))
+					// dispatch(AuthSlice.setToken(data.data.token))
 				} else {
 					// TODO Next nav
 					// navHistory.push(NAV.AUTH)

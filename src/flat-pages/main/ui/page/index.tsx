@@ -6,5 +6,7 @@ import { FC } from 'react'
 interface MainProps {}
 
 export const Main: FC<MainProps> = ({}) => {
-	return <div className={style.wrap}>{/*<Button variant={'contained'}>Hello World</Button>*/}</div>
+	return (
+		<div className={style.wrap}>фыв{/*<Button variant={'contained'}>Hello World</Button>*/}</div>
+	)
 }
